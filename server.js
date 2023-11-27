@@ -20,6 +20,7 @@ const opinions = {
   debug: true,
 };
 
+
 app.set("view engine", "ejs");
 app.use("/peerjs", ExpressPeerServer(server, opinions));
 app.use(express.static("public"));

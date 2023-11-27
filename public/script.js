@@ -5,6 +5,8 @@ const showChat = document.querySelector("#showChat");
 const backBtn = document.querySelector(".header__back");
 myVideo.muted = true;
 
+//It references several HTML elements by their IDs or classes
+
 backBtn.addEventListener("click", () => {
   document.querySelector(".main__left").style.display = "flex";
   document.querySelector(".main__left").style.flex = "1";
@@ -19,7 +21,13 @@ showChat.addEventListener("click", () => {
   document.querySelector(".header__back").style.display = "block";
 });
 
+//It creates a video element, sets it to be muted (to avoid feedback), 
+//and configures buttons to show/hide chat and navigate back.
+
 const user = prompt("Enter your name");
+
+//It uses the PeerJS library to set up a peer-to-peer connection, 
+//which is essential for WebRTC communication.
 
 var peer = new Peer({
   host: '127.0.0.1',
